@@ -1,29 +1,38 @@
-## 100 Movies that You Must Watch
+ Movie Scraper
 
-# Objective
+This Python script scrapes the Top 100 Movies of All Time from an archived version of Empire Online's website and saves the list to a text file.
+🔧 Features
 
-Scrape the top 100 movies of all time from a website. Generate a text file called `movies.txt` that lists the movie titles in ascending order (starting from 1). 
-The result should look something like this:
+    Fetches the webpage using requests
 
-```
-1) The Godfather
-2) The Empire Strikes Back
-3) The Dark Knight
-4) The Shawshank Redemption
-... and so on
-```
-The central idea behind this project is to be able to use BeautifulSoup to obtain some data - like movie titles - from a website like Empire's (or from, say Timeout or Stacker that have curated similar lists). 
+    Parses HTML using BeautifulSoup
 
-### ⚠️ Important: Use the Internet Archive's URL
+    Extracts movie titles from <h3 class="title"> elements
 
-Since websites change very frequently, **use this link** 
-```
-URL = "https://web.archive.org/web/20200518073855/https://www.empireonline.com/movies/features/best-movies-2/"
-```
-from the Internet Archive's Wayback machine. That way your work will match the solution video.
+    Saves each movie title to movies.txt
 
-(Do *not* use https://www.empireonline.com/movies/features/best-movies-2/ which I've used in the screen recording)
+📦 Requirements
 
-# Solution
+    Python 3.x
 
-You can find the code from my walkthrough and solution as a downloadable .zip file in the course resources for this lesson. 
+    requests
+
+    beautifulsoup4
+
+You can install the dependencies using:
+
+pip install requests beautifulsoup4
+
+▶️ How to Run
+
+python main.py
+
+This will:
+
+    Scrape the web page from the Wayback Machine URL
+
+    Write the extracted movie titles to movies.txt
+
+📁 Output
+
+The script creates or appends to a file called movies.txt, with each movie title on a new line.
